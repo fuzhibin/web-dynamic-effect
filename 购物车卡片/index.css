@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #131313;
+}
+
+.contantbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.goodcard {
+    position: relative;
+    overflow: hidden;
+    width: 320px;
+    height: 450px;
+    background-color: #232323;
+    border-radius: 15px;
+}
+
+.goodcard::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #9bdc28;
+    top: 0;
+    transition-duration: .5s;
+    clip-path: circle(45% at 10% 10%);
+}
+
+.goodcard::after {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    content: 'nick';
+    color: rgba(255, 255, 255, .04);
+    text-transform: uppercase;
+    font-size: 7em;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.goodcard:hover::before {
+    clip-path: circle(49.5% at 27% 19%);
+}
+
+.shoesbox {
+    height: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-5%) rotate(15deg);
+    transition-duration: .5s;
+}
+
+.goodcard:hover .shoesbox {
+    transform: translateY( -20%) rotate(15deg);
+}
+
+.shoesbox img {
+    width: 80%;
+}
+
+.selectbox {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    bottom: 0;
+    z-index: 3;
+    color: #fff;
+    transition-duration: 1s;
+    text-align: center;
+}
+
+.goodcard:hover .selectbox {
+    height: 190px;
+}
+
+.selectbox h2 {
+    font-weight: 700;
+}
+
+.shoes-size,
+.shoes-color {
+    opacity: 0;
+    visibility: hidden;
+    margin: 15px 0;
+    transition-duration: 1s;
+}
+
+.goodcard:hover .shoes-size {
+    transition-delay: .5s;
+}
+
+.goodcard:hover .shoes-color {
+    transition-delay: .6s;
+}
+
+.goodcard:hover .shoes-size,
+.goodcard:hover .shoes-color {
+    opacity: 1;
+    visibility: visible;
+}
+
+.shoes-size span,
+.shoes-color span {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px;
+    width: 24px;
+    height: 24px;
+}
+
+.shoes-size span {
+    font-weight: 600;
+    line-height: 24px;
+    color: #131313;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.shoes-color span {
+    border-radius: 50%;
+}
+
+.shoes-color span:nth-child(1) {
+    background-color: #9bdc28;
+}
+
+.shoes-color span:nth-child(2) {
+    background-color: #E0E0E0;
+}
+
+.shoes-color span:nth-child(3) {
+    background-color: #007ACC;
+}
+
+.shoes-color span:nth-child(4) {
+    background-color: #E37831;
+}
+
+.by-btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 5px 15px;
+    background-color: #fff;
+    color: #C46C62;
+    border-radius: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 1s;
+}
+
+.goodcard:hover .by-btn {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .7s;
+}
