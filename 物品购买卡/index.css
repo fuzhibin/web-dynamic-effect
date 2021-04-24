@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #131313;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart {
+    position: relative;
+    width: 450px;
+    height: 260px;
+}
+
+.cart img {
+    position: absolute;
+    z-index: 1;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transition-duration: 1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.cart:hover img {
+    left: 74%;
+}
+
+.circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.circle::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: red;
+    transition-duration: 1s;
+    clip-path: circle(35% at 50% 50%);
+}
+
+.cart:hover .circle::after {
+    clip-path: circle(100% at 50% 50%);
+    background-color: #0077B8;
+}
+
+.context {
+    position: absolute;
+    width: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    transition-duration: 1s;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px 10px 10px 30px;
+    text-transform: uppercase;
+}
+
+.cart:hover .context {
+    left: 27%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.context h3 {
+    padding: 10px 0;
+}
+
+.context p {
+    font-size: .8em;
+    line-height: 1.5em;
+}
+
+.context a {
+    padding: 5px 10px;
+    font-size: .8em;
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    background-color: #fff;
+    color: #131313;
+}
+
+@media screen and (max-width:990px) {
+    .cart {
+        max-width: 300px;
+    }
+    .cart:hover {
+        height: 600px;
+    }
+    .circle::after {
+        clip-path: circle(45% at 50% 50%);
+    }
+    .cart .context {
+        width: 60%;
+    }
+    .cart:hover .context {
+        left: 50%;
+        padding: 10px 10px 10px 10px;
+    }
+    .cart:hover img {
+        top: 72%;
+        left: 50%;
+    }
+}
