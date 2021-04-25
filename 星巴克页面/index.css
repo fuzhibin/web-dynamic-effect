@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100%;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 3;
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding: 20px 100px;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+header .logo {
+    max-width: 80px;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+header ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.cricle {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    clip-path: circle(60% at bottom right);
+}
+
+section {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 20px 100px 0;
+    overflow: hidden;
+    align-items: center;
+}
+
+section ul {
+    position: absolute;
+    list-style: none;
+    z-index: 5;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section ul li {
+    line-height: 50px;
+}
+
+section ul li img {
+    width: 25px;
+    height: 25px;
+    filter: invert(1);
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content div {
+    font-size: 4.2em;
+    line-height: 80px;
+}
+
+.content div span {
+    font-weight: 700;
+    color: #027145;
+}
+
+.content a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 6px 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #027145;
+}
+
+section img {
+    position: relative;
+    z-index: 2;
+    max-height: 450px;
+    margin-left: auto;
+}
+
+.small {
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+
+.small li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+    transition-duration: .5s;
+}
+
+.small li:hover {
+    transform: translateY(-15px);
+}
+
+.small li img {
+    width: 60px;
+}

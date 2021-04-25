@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辛巴主页面</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <a href="#"><img src="./images/logo.png" alt="" class="logo"></a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">What's New</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <div class="content">
+            <div>It's not just Coffee</div>
+            <div>It's <span> Starbucks</span></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimveniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo.
+            </p>
+            <a href="#">buy now</a>
+        </div>
+        <div class="cricle"></div>
+        <img src="./images/img1.png" alt="" class="bigPic">
+        <ul>
+            <li><img src="./images/facebook.png" alt=""></li>
+            <li><img src="./images/twitter.png" alt=""></li>
+            <li><img src="./images/instagram.png" alt=""></li>
+        </ul>
+    </section>
+    <ul class="small">
+        <li><img src="./images/thumb1.png" alt="" onclick="changeImg('./images/img1.png','#027145')"></li>
+        <li><img src="./images/thumb2.png" alt="" onclick="changeImg('./images/img2.png','#EBA5B8')"></li>
+        <li><img src="./images/thumb3.png" alt="" onclick="changeImg('./images/img3.png','#93366C')"></li>
+    </ul>
+    <script>
+        function changeImg(imgUrl, color) {
+            document.querySelector('.bigPic').src = imgUrl;
+            document.querySelector('.cricle').style.backgroundColor = color;
+        }
+    </script>
+</body>
+
+</html>
