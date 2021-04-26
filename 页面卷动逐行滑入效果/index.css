@@ -1,0 +1,73 @@
+:root {
+    --device-width: 770px;
+    --device-height: 1336px;
+    --ui-width: 640px;
+    font-size: 15px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    /* height: 100vh; */
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin-top: 200px;
+    font-size: 70px;
+    color: #6E6E73;
+}
+
+h3 {
+    font-size: 70px;
+    font-weight: 700;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.contain {
+    width: var(--device-width);
+    height: var(--device-height);
+    background-image: url(./imgs/iphone12-5g_on_phone.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    mask-image: url(./imgs/iphone12-5g_on_phone_mask.png);
+    -webkit-mask-image: url(./imgs/iphone12-5g_on_phone_mask.png);
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+}
+
+.top_ui {
+    display: block;
+    width: var(--ui-width);
+    margin: 70px auto 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #333;
+}
+
+.list_imgs {
+    width: var(--ui-width);
+    margin: 0 auto;
+}
+
+.list_imgs li {
+    list-style: none;
+    margin: 15px 0;
+    border-bottom: 1px solid #333;
+    transform: scale(calc(1.8 - (0.8 * var(--progress)))) translateY(calc(-60px * (1 - var(--progress))));
+    opacity: var(--progress);
+}
+
+.list_imgs li img {
+    /* display: block; */
+    width: 100%;
+}

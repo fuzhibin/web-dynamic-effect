@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面卷动逐行滑入效果</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h2>Superfast wireless</h2>
+    <h3>Hello 5G.</h3>
+    <div class="contain">
+        <img src="./imgs/iphone12-5g_top_ui.webp" alt="" class="top_ui">
+        <ul class="list_imgs">
+            <li><img src="./imgs/iphone12-5g_show_01.webp" alt=""></li>
+            <li><img src="./imgs/iphone12-5g_show_02.webp" alt=""></li>
+            <li><img src="./imgs/iphone12-5g_show_03.webp" alt=""></li>
+            <li><img src="./imgs/iphone12-5g_show_04.webp" alt=""></li>
+            <li><img src="./imgs/iphone12-5g_show_05.webp" alt=""></li>
+            <li><img src="./imgs/iphone12-5g_show_06.webp" alt=""></li>
+            <li><img src="./imgs/iphone12-5g_show_07.webp" alt=""></li>
+        </ul>
+    </div>
+    <script>
+        const rows = document.querySelectorAll('.list_imgs li')
+        const html = document.documentElement
+
+        document.addEventListener('scroll', (e) => {
+            let scrolled = html.scrollTop / (html.scrollHeight - html.clientHeight)
+
+            let total = 1 / rows.length
+
+            for (let [index, row] of rows.entries()) {
+                let start = total * index
+                let end = total * (index + 1)
+
+                let progress = (scrolled - start) / (end - start)
+                if (progress >= 1) progress = 1
+                if (progress <= 0) progress = 0
+
+                row.style.setProperty('--progress', progress)
+            }
+        })
+    </script>
+</body>
+
+</html>
