@@ -1,0 +1,23 @@
+body {
+    height: 100vh;
+}
+
+.title {
+    position: sticky;
+    top: -1px;
+    margin: 100px auto;
+    font-size: 72px;
+    transform: translateX(calc(50% + 20px)) scale(clamp(0.2, var(--scale), 1));
+    transform-origin: left;
+    width: 290px;
+}
+
+.imgbox {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.imgbox img {
+    width: 100%;
+}
