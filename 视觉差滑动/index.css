@@ -13,6 +13,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
     z-index: 10;
     padding: 20px 100px;
@@ -21,6 +22,7 @@ header {
     justify-content: space-between;
     align-items: center;
     color: #fff;
+    overflow: hidden;
 }
 
 header #logo {
